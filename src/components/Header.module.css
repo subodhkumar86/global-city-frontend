@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 12px;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.globe { font-size: 30px; line-height: 1; }
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-1);
+}
+
+.sub {
+  font-size: 0.68rem;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  margin-top: 1px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.updated {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.updatedLabel {
+  font-size: 0.6rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+}
+
+.updatedVal {
+  font-size: 0.7rem;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.countdownText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.countdownNum {
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--green);
+  line-height: 1.1;
+}
+
+.countdownLabel {
+  font-size: 0.58rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+}
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--ease);
+}
+
+.refreshBtn:hover:not(:disabled) {
+  background: rgba(79, 195, 247, 0.1);
+}
+
+.refreshBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spin {
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .updated { display: none; }
+  .title { font-size: 1rem; }
+  .globe { font-size: 24px; }
+  .header { padding: 8px 12px; }
+}
